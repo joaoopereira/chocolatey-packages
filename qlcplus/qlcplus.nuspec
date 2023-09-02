@@ -42,7 +42,7 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
     <licenseUrl>https://github.com/mcallegari/qlcplus#apache-20-license</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <projectSourceUrl>https://github.com/mcallegari/qlcplus</projectSourceUrl>
-    <docsUrl>https://www.qlcplus.org/downloads/4.12.6/QLC+_manual_en_EN_4.12.6.pdf</docsUrl>
+    <docsUrl>https://docs.qlcplus.org/v4</docsUrl>
     <!--<mailingListUrl></mailingListUrl>-->
     <bugTrackerUrl>https://github.com/mcallegari/qlcplus/issues</bugTrackerUrl>
     <tags>qlcplus QLCplus DMX analog lighting moving heads dimmers controller</tags>
