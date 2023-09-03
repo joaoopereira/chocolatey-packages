@@ -1,0 +1,48 @@
+# This is a basic workflow to help you get started with Actions
+
+name: update all packages
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the "development" branch
+  #push:
+  #  branches: [ "development" ]
+  #pull_request:
+  #  branches: [ "development" ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  update_all:
+    # The type of runner that the job will run on
+    runs-on: windows-latest
+    env:
+      au_Push: ${{ vars.AU_PUSH }}
+      au_NoCheckChocoVersion: ${{ vars.AU_NOCHECKCHOCOVERSION }}
+      au_Force: ${{ vars.AU_FORCE }}
+      api_key: ${{ secrets.CHOCO_API_KEY }}
+      github_api_key: ${{ secrets.GH_API_KEY }}
+      github_user_repo: joaoopereira/chocolatey-packages
+      gist_id: 96897ba590320ac7b84dd5f9a68914c3
+      gist_id_test: 2b4075bc4b14c88550bad4888e276142
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v3
+
+      - name: install dependencies
+        uses: crazy-max/ghaction-chocolatey@v2
+        with:
+          args: install -y au
+
+      - name: run test_all
+        shell: pwsh
+        run: .\test_all.ps1
+
+      - name: run update_all
+        shell: pwsh
+        run: .\update_all.ps1
