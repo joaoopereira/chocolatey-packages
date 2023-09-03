@@ -5,15 +5,16 @@ param([string[]] $Name, [string] $ForcedPackages, [string] $Root = $PSScriptRoot
 if (Test-Path $PSScriptRoot/update_vars.ps1) { . $PSScriptRoot/update_vars.ps1 }
 
 $Options = [ordered]@{
-    WhatIf        = $au_WhatIf                              #Whatif all packages
-    Force         = $false                                  #Force all packages
-    Timeout       = 100                                     #Connection timeout in seconds
-    UpdateTimeout = 1200                                    #Update timeout in seconds
-    Threads       = 10                                      #Number of background jobs to use
-    Push          = $Env:au_Push -eq 'true'                 #Push to chocolatey
-    PushAll       = $true                                   #Allow to push multiple packages at once
-    PluginPath    = ''                                      #Path to user plugins
-    IgnoreOn      = @(                                      #Error message parts to set the package ignore status
+    NoCheckChocoVersion = $Env:au_NoCheckChocoVersion -eq 'true'
+    WhatIf              = $au_WhatIf                              #Whatif all packages
+    Force               = $Env:au_Force -eq 'true'                                  #Force all packages
+    Timeout             = 100                                     #Connection timeout in seconds
+    UpdateTimeout       = 1200                                    #Update timeout in seconds
+    Threads             = 10                                      #Number of background jobs to use
+    Push                = $Env:au_Push -eq 'true'                 #Push to chocolatey
+    PushAll             = $true                                   #Allow to push multiple packages at once
+    PluginPath          = ''                                      #Path to user plugins
+    IgnoreOn            = @(                                      #Error message parts to set the package ignore status
       'Origin Time-out'
       'Could not create SSL/TLS secure channel'
       'Could not establish trust relationship'
@@ -48,7 +49,7 @@ $Options = [ordered]@{
         Path = "$PSScriptRoot\Update-AUPackages.md"         #Path where to save the report
         Params= @{                                          #Report parameters:
             Github_UserRepo = $Env:github_user_repo         #  Markdown: shows user info in upper right corner
-            NoAppVeyor  = $false                            #  Markdown: do not show AppVeyor build shield
+            NoAppVeyor  = $true                            #  Markdown: do not show AppVeyor build shield
             UserMessage = "[Ignored](#ignored) | [History](#update-history) | [Force Test](https://gist.github.com/$Env:gist_id_test) | [Releases](https://github.com/$Env:github_user_repo/tags) | **TESTING AU NEXT VERSION**"       #  Markdown, Text: Custom user message to show
             NoIcons     = $false                            #  Markdown: don't show icon
             IconSize    = 32                                #  Markdown: icon size
@@ -68,10 +69,9 @@ $Options = [ordered]@{
         Path   = "$PSScriptRoot\Update-AUPackages.md", "$PSScriptRoot\Update-History.md"       #List of files to add to the gist
     }
 
-    Git = @{
-        User     = ''                                       #Git username, leave empty if github api key is used
+    Git = @{                                  #Git username, leave empty if github api key is used
         Password = $Env:github_api_key                      #Password if username is not empty, otherwise api key
-        # Branch   = 'updates'
+        Branch   = 'development'
     }
 
     GitReleases  = @{
@@ -117,4 +117,4 @@ $global:au_Root = $Root                                    #Path to the AU packa
 $global:info = updateall -Name $Name -Options $Options
 
 #Uncomment to fail the build on AppVeyor on any package error
-#if ($global:info.error_count.total) { throw 'Errors during update' }
+if ($global:info.error_count.total) { throw 'Errors during update' }
