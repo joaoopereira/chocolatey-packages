@@ -35,26 +35,12 @@ function Set-ReleaseNotes ($Package) {
 
 function Get-ChangeLogFromRepo ($Package) {
     $changelogUrl = "https://raw.githubusercontent.com/mcallegari/qlcplus/master/debian/changelog"
-    $changelog = Invoke-WebRequest -Uri $changelogUrl -UseBasicParsing
-
+    $changelog = (Invoke-WebRequest -Uri $changelogUrl -UseBasicParsing).Content -replace "<massimocallegari@yahoo.it>",""
     $versionToFind = $Package.RemoteVersion
 
-    # Split the content into individual version sections
-    $versionSections = $changelog.Content -split "(?=\bqlcplus \(\d+\.\d+\.\d+\) stable; urgency=low)"
+    $changelogForVersion = $changelog -split "(?=\bqlcplus \(\d+\.\d+\.\d+\) stable; urgency=low)" | Where-Object {$_ -match $versionToFind}
 
-    # Initialize a flag to check if the version was found
-    $versionFound = $false
-
-    # Loop through the version sections and find the specified version
-    foreach ($section in $versionSections) {
-        if ($section -match "qlcplus \($versionToFind\) stable; urgency=low") {
-            $changelogForVersion = $section.Trim()
-            $versionFound = $true
-            break
-        }
-    }
-
-    if (-not $versionFound) {
+    if ($null -eq $changelogForVersion -or $changelogForVersion -eq "") {
         Write-Host "Version $versionToFind not found in the changelog."
     }
 

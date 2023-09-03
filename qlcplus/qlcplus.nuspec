@@ -72,7 +72,7 @@ QLC+ runs on Linux, Windows (7+), macOS (10.7+) and the Raspberry Pi.
   * New fixture: Varytec Hero Spot 90 (thanks to Chris de Rock)
   * New fixtures: Eurolite LED H2O Water Effect, Stairville All FX Bar (thanks to Rami Toivola)
 
- -- Massimo Callegari <massimocallegari@yahoo.it>  Sun, 28 Aug 2022 12:13:14 +0200]]></releaseNotes>
+ -- Massimo Callegari   Sun, 28 Aug 2022 12:13:14 +0200]]></releaseNotes>
     <!-- =============================== -->
     <!-- Specifying dependencies and version ranges? https://docs.nuget.org/create/versioning#specifying-version-ranges-in-.nuspec-files -->
     <!--<dependencies>
