@@ -24,7 +24,7 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
     <!-- Is the version a prerelease of a version? https://docs.nuget.org/create/versioning#creating-prerelease-packages -->
     <!-- Note that unstable versions like 0.0.1 can be considered a released version, but it's possible that one can release a 0.0.1-beta before you release a 0.0.1 version. If the version number is final, that is considered a released version and not a prerelease. -->
     <version>4.12.6</version>
-    <packageSourceUrl>https://github.com/joaoopereira/chocolatey-packages/qlcplus</packageSourceUrl>
+    <packageSourceUrl>https://github.com/joaoopereira/chocolatey-packages/tree/development/qlcplus</packageSourceUrl>
     <!-- owners is a poor name for maintainers of the package. It sticks around by this name for compatibility reasons. It basically means you. -->
     <owners>joaoopereira</owners>
     <!-- ============================== -->
@@ -36,7 +36,7 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
     <projectUrl>https://www.qlcplus.org</projectUrl>
     <!-- There are a number of CDN Services that can be used for hosting the Icon for a package. More information can be found here: https://docs.chocolatey.org/en-us/create/create-packages#package-icon-guidelines -->
     <!-- Here is an example using Githack -->
-    <iconUrl>https://www.qlcplus.org/images/qlcplus_icon.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/mcallegari/qlcplus/master/resources/icons/png/qlcplus.png</iconUrl>
     <copyright>Heikki Junnila, Massimo Callegari</copyright>
     <!-- If there is a license Url available, it is required for the community feed -->
     <licenseUrl>https://github.com/mcallegari/qlcplus#apache-20-license</licenseUrl>
