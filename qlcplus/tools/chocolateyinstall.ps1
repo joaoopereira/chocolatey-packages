@@ -1,7 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop'
 $toolsDir         = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url              = 'https://www.qlcplus.org/downloads/4.12.6/QLC+_4.12.6.exe'
-$checksum         = ''
+$url              = 'https://www.qlcplus.org/downloads/4.12.7/QLC+_4.12.7-1.exe'
+$checksum         = 'a35630b869a72405b4f24871f79d664dfbad3a709ffaa57eb40b19eec7ed2ef9'
 $checksumType     = 'sha256'
 
 $packageArgs = @{
