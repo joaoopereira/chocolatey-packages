@@ -12,6 +12,8 @@ $Env:gist_id                = ''          #Specify your gist id or leave empty f
 $Env:gist_id_test           = ''          #Specify your gist id for test runs or leave empty for anonymous gist
 $Env:github_user_repo       = ''          #{github_user}/{repo}
 $Env:github_api_key         = ''          #Github personal access token
+$Env:github_gists_api_key   = ''          #Github personal access token with gists read/write permissions
+
 $Env:au_Push                = 'false'     #Push to chocolatey
 $Env:au_Force               = 'false'
 $Env:au_NoCheckChocoVersion = 'false'
