@@ -1,5 +1,4 @@
-name: update packages
-
+name: build
 
 on:
   workflow_dispatch:
