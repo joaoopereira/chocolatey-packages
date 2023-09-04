@@ -17,6 +17,7 @@ jobs:
       au_Force: ${{ vars.AU_FORCE }}
       api_key: ${{ secrets.CHOCO_API_KEY }}
       github_api_key: ${{ secrets.GITHUB_TOKEN }}
+      github_gists_api_key: ${{ secrets.GH_GISTS_TOKEN }}
       github_user_repo: joaoopereira/chocolatey-packages
       gist_id: 96897ba590320ac7b84dd5f9a68914c3
       gist_id_test: 2b4075bc4b14c88550bad4888e276142
