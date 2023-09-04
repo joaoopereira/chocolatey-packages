@@ -71,12 +71,16 @@ $Options = [ordered]@{
 
     Git = @{                                  #Git username, leave empty if github api key is used
         Password = $Env:github_api_key                      #Password if username is not empty, otherwise api key
-        Branch   = 'development'
+        Branch   = $Env:default_branch
+        commitStrategy = 'atomictag'
+        Force = $Env:force_git -eq 'true'
     }
 
     GitReleases  = @{
         ApiToken    = $Env:github_api_key                   #Your github api key
+        Branch   = $Env:default_branch
         ReleaseType = 'package'                             #Either 1 release per date, or 1 release per package
+        Force = $Env:force_gitReleases -eq 'true'
     }
 
     RunInfo = @{
