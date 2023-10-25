@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>devpod</id>
+    <version>0.3.6</version>
+    <packageSourceUrl>https://github.com/joaoopereira/chocolatey-packages</packageSourceUrl>
+    <!-- owners is a poor name for maintainers of the package. It sticks around by this name for compatibility reasons. It basically means you. -->
+    <owners>joaoopereira</owners>
+
+    <title>devpod</title>
+    <authors>Loft Labs, Inc.</authors>
+    <projectUrl>https://github.com/loft-sh/devpod</projectUrl>
+    <copyright>Loft Labs, Inc.</copyright>
+    <licenseUrl>https://github.com/loft-sh/devpod/blob/main/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/loft-sh/devpod</projectSourceUrl>
+    <docsUrl>https://devpod.sh/docs</docsUrl>
+    <!-- There are a number of CDN Services that can be used for hosting the Icon for a package. More information can be found here: https://docs.chocolatey.org/en-us/create/create-packages#package-icon-guidelines -->
+    <!-- Here is an example using Githack -->
+    <iconUrl>https://cdn.jsdelivr.net/gh/loft-sh/devpod@main/docs/static/media/devpod-favicon.png</iconUrl>
+    <bugTrackerUrl>https://github.com/loft-sh/devpod/issues</bugTrackerUrl>
+    <tags>devpod containers docker kubernetes</tags>
+    <summary>Codespaces but open-source, client-only and unopinionated: Works with any IDE and lets you use any cloud, kubernetes or just localhost docker.</summary>
+    <description>DevPod is a client-only tool to create reproducible developer environments based on a devcontainer.json on any backend. Each developer environment runs in a container and is specified through a devcontainer.json. Through DevPod providers, these environments can be created on any backend, such as the local computer, a Kubernetes cluster, any reachable remote machine, or in a VM in the cloud.</description>
+    <releaseNotes>https://github.com/loft-sh/devpod/releases/tag/v0.3.6</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
