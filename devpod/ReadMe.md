@@ -1,0 +1,3 @@
+﻿# [<img src="https://cdn.jsdelivr.net/gh/loft-sh/devpod@main/docs/static/media/devpod-favicon.png" width="48" height="48"/>](https://devpod.sh) [![](https://img.shields.io/chocolatey/v/devpod.svg?label=devpod)](https://chocolatey.org/packages/devpod)
+
+[DevPod](https://devpod.sh) is a client-only tool to create reproducible developer environments based on a devcontainer.json on any backend. Each developer environment runs in a container and is specified through a devcontainer.json. Through DevPod providers, these environments can be created on any backend, such as the local computer, a Kubernetes cluster, any reachable remote machine, or in a VM in the cloud.

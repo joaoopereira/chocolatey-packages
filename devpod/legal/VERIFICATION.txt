@@ -1,0 +1,28 @@
+﻿VERIFICATION
+
+Verification is intended to assist the Chocolatey moderators and community
+in verifying that this package's contents are trustworthy.
+
+The application has been downloaded from the official distribution and can
+be verified by:
+
+1. Go to the binary distribution page
+
+  https://github.com/loft-sh/devpod/releases
+
+and download the installer jruby_windows_9_4_4_0.exe or DevPod_windows_x64_en-US.msi using
+the links in the relevant assets section of the page.
+
+Alternatively the installers can be downloaded directly from
+
+  https://github.com/loft-sh/devpod/releases/download/0.3.7.202310260231026/DevPod_windows_x64_en-US.msi
+
+2. The installer can be validated by comparing checksums
+  - Use powershell function 'Get-Filehash' - Get-Filehash -Algorithm sha256 DevPod_windows_x64_en-US.msi
+  - Use chocolatey utility 'checksum.exe'  - checksum -t sha256 -f DevPod_windows_x64_en-US.msi
+
+  File64:     DevPod_windows_x64_en-US.msi
+  Type64:     sha256
+  Checksum64: 73B398D6738E7480B34BF6D70B3FA77DAA6EE4C0A3D8D11F0741415107E263EA
+
+Contents of file LICENSE.txt is obtained from https://raw.githubusercontent.com/loft-sh/devpod/main/LICENSE
