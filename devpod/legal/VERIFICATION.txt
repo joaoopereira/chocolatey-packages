@@ -1,4 +1,4 @@
-﻿VERIFICATION
+VERIFICATION
 
 Verification is intended to assist the Chocolatey moderators and community
 in verifying that this package's contents are trustworthy.
@@ -15,7 +15,7 @@ the links in the relevant assets section of the page.
 
 Alternatively the installers can be downloaded directly from
 
-  https://github.com/loft-sh/devpod/releases/download/0.3.7.202310260231026/DevPod_windows_x64_en-US.msi
+  https://github.com/loft-sh/devpod/releases/download/0.3.702310260231026/DevPod_windows_x64_en-US.msi
 
 2. The installer can be validated by comparing checksums
   - Use powershell function 'Get-Filehash' - Get-Filehash -Algorithm sha256 DevPod_windows_x64_en-US.msi
