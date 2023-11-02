@@ -120,5 +120,5 @@ if ($ForcedPackages) { Write-Host "FORCED PACKAGES: $ForcedPackages" }
 $global:au_Root = $Root                                    #Path to the AU packages
 $global:info = updateall -Name $Name -Options $Options
 
-#Uncomment to fail the build on AppVeyor on any package error
-if ($global:info.error_count.total) { throw 'Errors during update' }
+$errors = $global:info | Where-Object { $_.Error }
+if ($errors.Count -gt 0) { throw 'Errors during update' }
