@@ -6,7 +6,7 @@ Import-Module "$PSScriptRoot\..\_scripts\au_extensions.psm1"
 
 $re64         = '(DevPod_(?=[^\s]+x64)[^\s]+\.msi)'
 $reChecksum64 = '(?<=Checksum64:\s*)((?<Checksum>([^\s].+)))'
-$reVersion    = '(?<=\/|v|\s)(?<Version>([\d]+\.[\d]+\.[\d]+\.[\d]))'
+$reType64     = '(?<=Type64:\s*)((?<Type64>([^\s].+)))'
 
 function global:au_BeforeUpdate { Get-RemoteFiles -Purge -NoSuffix }
 
@@ -24,8 +24,8 @@ function global:au_SearchReplace {
 
     ".\legal\VERIFICATION.txt" = @{
       "$($re64)"       = "$($Latest.Filename64)"
+      "$($reType64)"  = "$($Latest.checksumType64)"
       "$($reChecksum64)" = "$($Latest.Checksum64)"
-      "$($reVersion)"  = "$($Latest.Version)"
     }
   }
 }
