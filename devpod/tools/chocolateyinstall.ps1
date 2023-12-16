@@ -1,6 +1,6 @@
 ﻿$toolsDir = Split-Path -Parent $MyInvocation.MyCommand.Definition
-$url              = 'https://github.com/loft-sh/devpod/releases/download/v0.3.7/DevPod_windows_x64_en-US.msi'
-$checksum         = '73B398D6738E7480B34BF6D70B3FA77DAA6EE4C0A3D8D11F0741415107E263EA'
+$url              = 'https://github.com/loft-sh/devpod/releases/download/v0.4.2/DevPod_windows_x64_en-US.msi'
+$checksum         = 'EEB28BFA6091570DDF7CAE1F0BEF1ECB6FE6803CDE3C3343A88B453291BAAC1F'
 $checksumType     = 'sha256'
 $file             = "$toolsDir\DevPod_windows_x64_en-US.msi"
 
