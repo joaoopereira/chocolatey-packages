@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>devpod</id>
-    <version>0.3.7</version>
+    <version>0.4.2</version>
     <packageSourceUrl>https://github.com/joaoopereira/chocolatey-packages</packageSourceUrl>
     <!-- owners is a poor name for maintainers of the package. It sticks around by this name for compatibility reasons. It basically means you. -->
     <owners>joaoopereira</owners>
@@ -23,7 +23,7 @@
     <summary>Codespaces but open-source, client-only and unopinionated: Works with any IDE and lets you use any cloud, kubernetes or just localhost docker.</summary>
     <description><![CDATA[[DevPod](https://devpod.sh) is a client-only tool to create reproducible developer environments based on a devcontainer.json on any backend. Each developer environment runs in a container and is specified through a devcontainer.json. Through DevPod providers, these environments can be created on any backend, such as the local computer, a Kubernetes cluster, any reachable remote machine, or in a VM in the cloud.
 ]]></description>
-    <releaseNotes>https://github.com/loft-sh/devpod/releases/tag/v0.3.7</releaseNotes>
+    <releaseNotes>https://github.com/loft-sh/devpod/releases/tag/v0.4.2</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
