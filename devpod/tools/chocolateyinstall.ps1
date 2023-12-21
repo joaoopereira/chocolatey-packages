@@ -9,17 +9,13 @@ $packageArgs = @{
     unzipLocation   = $toolsDir
     fileType        = 'msi'
     url             = $url
-    url64bit        = $url
 
     softwareName   = 'DevPod*'
 
     checksum        = $checksum
     checksumType    = $checksumType
-    checksum64      = $checksum
-    checksumType64  = $checksumType
 
     file            = $file
-    file64          = $file
 
     validExitCodes = @(0, 1641, 3010)
     silentArgs     = '/qn /norestart'
