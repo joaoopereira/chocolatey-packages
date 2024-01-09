@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>ssh-manager</id>
+    <version>1.5.1</version>
+    <packageSourceUrl>https://github.com/joaoopereira/chocolatey-packages</packageSourceUrl>
+    <!-- owners is a poor name for maintainers of the package. It sticks around by this name for compatibility reasons. It basically means you. -->
+    <owners>joaoopereira</owners>
+
+    <title>SSH Key Manager</title>
+    <authors>omegion</authors>
+    <projectUrl>https://ssh-manager.omegion.dev/</projectUrl>
+    <copyright>Loft Labs, Inc.</copyright>
+    <licenseUrl>https://github.com/omegion/ssh-manager/blob/master/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/omegion/ssh-manager</projectSourceUrl>
+    <docsUrl>https://ssh-manager.omegion.dev/guide</docsUrl>
+    <!-- There are a number of CDN Services that can be used for hosting the Icon for a package. More information can be found here: https://docs.chocolatey.org/en-us/create/create-packages#package-icon-guidelines -->
+    <iconUrl>https://ssh-manager.omegion.dev/img/logo.png</iconUrl>
+    <bugTrackerUrl>https://github.com/omegion/ssh-manager/issues</bugTrackerUrl>
+    <tags>ssh-manager ssh ssh-key ssh-agent 1password bw bitwarden</tags>
+    <summary>SSH Key Manager for 1Password, Bitwarden and AWS S3.</summary>
+    <description><![CDATA[[SSH Key Manager](https://ssh-manager.omegion.dev) is a SSH Key Manager for 1Password, Bitwarden and AWS S3.
+]]></description>
+    <releaseNotes>https://github.com/omegion/ssh-manager/releases/tag/v1.5.1</releaseNotes>
+  </metadata>
+  <files>
+    <file src="bin\**" target="bin" />
+    <file src="legal\**" target="legal" />
+  </files>
+</package>

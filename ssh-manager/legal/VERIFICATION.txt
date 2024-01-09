@@ -1,0 +1,28 @@
+VERIFICATION
+
+Verification is intended to assist the Chocolatey moderators and community
+in verifying that this package's contents are trustworthy.
+
+The application has been downloaded from the official distribution and can
+be verified by:
+
+1. Go to the binary distribution page
+
+  https://github.com/omegion/ssh-manager/releases
+
+and download the binary ssh-manager-windows-amd64 using
+the links in the relevant assets section of the page.
+
+Alternatively the installers can be downloaded directly from
+
+  https://github.com/omegion/ssh-manager/releases/download/v1.5.1/ssh-manager-windows-amd64
+
+2. The installer can be validated by comparing checksums
+  - Use powershell function 'Get-Filehash' - Get-Filehash -Algorithm sha256 ssh-manager-windows-amd64
+  - Use chocolatey utility 'checksum.exe'  - checksum -t sha256 -f ssh-manager-windows-amd64
+
+  File64:     ssh-manager-windows-amd64
+  Type64:     sha256
+  Checksum64: EEB28BFA6091570DDF7CAE1F0BEF1ECB6FE6803CDE3C3343A88B453291BAAC1F
+
+Contents of file LICENSE.txt is obtained from https://raw.githubusercontent.com/omegion/ssh-manager/master/LICENSE
