@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>podman-cli</id>
+    <title>Podman CLI</title>
+    <version>4.8.0</version>
+    <authors>Podman Contributors</authors>
+    <summary>Lightweight Linux for Podman</summary>
+    <description><![CDATA[[podman](https://podman.io) is an open source container, pod, and container image management engine. Podman makes it easy to find, run, build, and share containers.
+]]></description>
+    <packageSourceUrl>https://github.com/lareeth/choco-podman-cli</packageSourceUrl>
+    <owners>lareeth</owners>
+    <projectUrl>https://podman.io/</projectUrl>
+    <licenseUrl>https://raw.githubusercontent.com/containers/podman/main/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/containers/podman</projectSourceUrl>
+    <tags>podman-machine podman oci containers</tags>
+    <bugTrackerUrl>https://github.com/containers/podman/issues</bugTrackerUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/containers/common@main/logos/podman-logo-full-vert.png</iconUrl>
+    <releaseNotes>https://github.com/containers/podman/releases/tag/v4.8.0</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

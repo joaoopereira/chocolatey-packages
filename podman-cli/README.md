@@ -1,0 +1,3 @@
+# [<img src="https://cdn.jsdelivr.net/gh/containers/common@main/logos/podman-logo-full-vert.png" width="48" height="48"/>](https://podman.io) [![](https://img.shields.io/chocolatey/v/podman-cli.svg?label=podman-cli)](https://chocolatey.org/packages/podman-cli)
+
+[podman](https://podman.io) is an open source container, pod, and container image management engine. Podman makes it easy to find, run, build, and share containers.
