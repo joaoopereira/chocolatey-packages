@@ -23,6 +23,6 @@ Alternatively the installers can be downloaded directly from
 
   File64:     DevPod_windows_x64_en-US.msi
   Type64:     sha256
-  Checksum64: EEB28BFA6091570DDF7CAE1F0BEF1ECB6FE6803CDE3C3343A88B453291BAAC1F
+  Checksum64: 741EA422A0CE866A288363DA7C4777D26F20805AC938BDDBCF10F6116ADA5E12
 
 Contents of file LICENSE.txt is obtained from https://raw.githubusercontent.com/loft-sh/devpod/main/LICENSE
